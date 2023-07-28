@@ -8,9 +8,8 @@ const { throws } = require("assert");
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 const storage = multer.diskStorage({
   destination: "temp",
   filename: (req, file, cb) => {
