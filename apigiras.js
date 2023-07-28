@@ -24,10 +24,10 @@ app.use(
 );
 
 var conexion = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "giras",
+  host: "us-cdbr-east-06.cleardb.net",
+  user: "b6b43d4048edb6",
+  password: "ac3334d6",
+  database: "heroku_cad83d5811b7f3c",
 });
 
 conexion.connect(function(error) {
