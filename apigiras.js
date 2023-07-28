@@ -23,10 +23,10 @@ app.use(
 );
 
 var conexion = mysql.createConnection({
-  host: "mysql-apigiras.alwaysdata.net",
-  user: "apigiras",
+  host: "auth-db995.hstgr.io",
+  user: "u106681023_root",
   password: "Juan1985!",
-  database: "apigiras_giras",
+  database: "u106681023_giras",
 });
 
 conexion.connect(function(error) {
