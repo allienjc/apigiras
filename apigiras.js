@@ -878,6 +878,7 @@ app.get("/download2/:minuta_id/:nombre", (req, res) => {
   res.download(file);
 });
 
-app.listen(8000, () => {
-  console.log("ok");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
