@@ -44,6 +44,7 @@ app.get("/", function(req, res) {
 });
 
 app.post("/login", function(req, res) {
+  console.log("tratando de logearse")
   let user = req.body.user;
   let pass = req.body.pass;
   conexion.query(
@@ -642,7 +643,7 @@ app.get("/obtener_avances", (req, res) => {
   const asunto_id = req.query.asunto_id;
   const anio = req.query.anio;
   const mes = req.query.mes;
-  let fecha_inicial = anio + "-" + mes + "-" + 01;
+  let fecha_inicial = anio + "-" + mes + "-" + 1;
   let ultimo_dia = new Date(anio, mes, 0).getDate();
   let fecha_final = anio + "-" + mes + "-" + ultimo_dia;
   conexion.query(
@@ -692,7 +693,7 @@ app.get("/obtener_avancespdf", (req, res) => {
   const id_minuta = req.query.id_minuta;
   const anio = req.query.anio;
   const mes = req.query.mes;
-  let fecha_inicial = anio + "-" + mes + "-" + 01;
+  let fecha_inicial = anio + "-" + mes + "-" + 1;
   let ultimo_dia = new Date(anio, mes, 0).getDate();
   let fecha_final = anio + "-" + mes + "-" + ultimo_dia;
   conexion.query(
@@ -878,6 +879,6 @@ app.get("/download2/:minuta_id/:nombre", (req, res) => {
   res.download(file);
 });
 
-app.listen(4000, () => {
+app.listen(8000, () => {
   console.log("ok");
 });
