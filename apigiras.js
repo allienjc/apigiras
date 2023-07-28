@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const multer = require("multer");
@@ -24,10 +24,10 @@ app.use(
 );
 
 var conexion = mysql.createConnection({
-  host: "us-cdbr-east-06.cleardb.net",
-  user: "b6b43d4048edb6",
-  password: "ac3334d6",
-  database: "heroku_cad83d5811b7f3c",
+  host: "srv995.hstgr.io",
+  user: "u106681023_root",
+  password: "Juan1985!",
+  database: "u106681023_giras",
 });
 
 conexion.connect(function(error) {
